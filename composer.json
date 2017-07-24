@@ -1,0 +1,42 @@
+{
+    "name": "empari/geo",
+    "description": "Countries,  States and Cities helper for Laravel.",
+    "keywords": ["empari", "geo", "country", "state", "city"],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Adriano Santos",
+            "email": "adrianodrix@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "laravel/framework": "5.4.*",
+        "league/fractal": "^0.16.0",
+        "prettus/l5-repository": "^2.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7"
+    },
+    "autoload": {
+        "classmap": [
+            "src/database/migrations",
+            "src/database/seeds"
+        ],
+        "psr-4": {
+            "Empari\\Geo\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
