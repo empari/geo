@@ -29,6 +29,12 @@ Publish Configuration
 php artisan vendor:publish --provider "Empari/Geo/GeoServiceProvider"
 ```
 
+Migrate the new tables
+
+```shell
+php artisan migrate
+```
+
 Seeder Tables
 
 ```shell

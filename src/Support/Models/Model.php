@@ -5,7 +5,6 @@ use Illuminate\Database\Eloquent\Model as Entity;
 
 class Model extends Entity
 {
-
     /**
      * Scope a query to only include users of a given name.
      *
@@ -15,8 +14,6 @@ class Model extends Entity
      */
     public function scopeFindByName($query, $value)
     {
-        return $query->whereHas($this->table, function($q) use ($value) {
-            $q->where('name', 'like', '%'. $value .'%');
-        })->get();
+        return $query->where('name', 'like', '%'. $value .'%');
     }
 }
