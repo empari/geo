@@ -1,4 +1,6 @@
 <?php
+namespace Empari\Geo\Database\Seeders;
+
 use Illuminate\Database\Seeder;
 
 class StateTableSeeder extends Seeder
