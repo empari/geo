@@ -1,5 +1,6 @@
 {
     "name": "empari/geo",
+    "version": "5.5.0",
     "description": "Countries,  States and Cities helper for Laravel.",
     "keywords": ["empari", "geo", "country", "state", "city"],
     "type": "library",
@@ -8,16 +9,15 @@
     "prefer-stable": true,
     "authors": [
         {
-            "name": "Adriano Santos",
-            "email": "adrianodrix@gmail.com"
+            "name": "Team Empari",
+            "email": "suporte@empari.com.br"
         }
     ],
     "require": {
         "php": "^7.0",
-        "laravel/framework": "5.4.*",
-        "league/fractal": "^0.16.0",
-        "prettus/l5-repository": "^2.6",
-        "empari/geo": "*"
+        "laravel/framework": "5.5.*",
+        "league/fractal": "^0",
+        "prettus/l5-repository": "^2.6"
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7"
