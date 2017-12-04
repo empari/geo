@@ -1,6 +1,8 @@
 <?php
 namespace Empari\Geo;
 
+use Empari\Geo\Providers\RepositoryServiceProvider;
+use Empari\Geo\Providers\RouteServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class GeoServiceProvider extends ServiceProvider
@@ -12,8 +14,17 @@ class GeoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Migrations
         $this->publishes([
-            __DIR__ . '../database/migrations' => database_path('migrations/'),
-        ]);
+            __DIR__ . '/../database/migrations' => base_path('database/migrations')
+        ], 'migrations');
+
+        $this->app->register(RepositoryServiceProvider::class);
+        $this->app->register(RouteServiceProvider::class);
+    }
+
+    public function register()
+    {
+        //
     }
 }
