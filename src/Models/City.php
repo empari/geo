@@ -1,5 +1,4 @@
-<?php
-namespace Empari\Geo\Models;
+<?php namespace Empari\Geo\Models;
 
 use Empari\Geo\Support\Models\Model;
 
@@ -58,5 +57,20 @@ class City extends Model
     public function country()
     {
         return $this->state->country;
+    }
+
+    /**
+     * Scope a query to find by state
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @param string $value
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeFindByState($query, $value)
+    {
+        return $query
+            ->join('states', 'cities.state_id', '=', 'state.id')
+            ->where('states.initials', '=', $value)
+            ->orWhere('states.name', 'like', '%'. $value .'%');
     }
 }
