@@ -12,7 +12,7 @@ class CountryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('countries')->delete();
+        \DB::table('countries')->delete();
 
         \Empari\Geo\Models\Country::insert(array(
             array('id' => 132, 'name' => ucwords(strtolower('AFEGANISTAO'))),

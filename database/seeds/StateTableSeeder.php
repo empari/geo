@@ -12,7 +12,7 @@ class StateTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('states')->delete();
+        \DB::table('states')->delete();
 
         \Empari\Geo\Models\State::insert(array(
             //array('id' => -2, 'name' => 'Suframa', 'initials' => 'SU', 'country_id' => 1058),
