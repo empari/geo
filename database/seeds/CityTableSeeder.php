@@ -12,7 +12,7 @@ class CityTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('cities')->delete();
+        \DB::table('cities')->delete();
 
         \Empari\Geo\Models\City::insert(array(
             array('id' => 4100608, 'name' => 'Alto Paraná', 'state_id' => 41),
