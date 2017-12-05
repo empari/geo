@@ -1,6 +1,6 @@
 {
     "name": "empari/geo",
-    "version": "5.5.1",
+    "version": "5.5.2",
     "description": "Countries,  States and Cities helper for Laravel.",
     "keywords": ["empari", "geo", "country", "state", "city"],
     "type": "library",
